@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكيين لمستقبل أفضل — تكتل مرشحين لعضوية مجلس إدارة شركة أشرقت</title>
+<meta name="description" content="مكيين لمستقبل أفضل — تكتل مرشحين لعضوية مجلس إدارة شركة مطوفي حجاج الدول العربية (أشرقت). البرنامج الانتخابي، المرشحون، وطريقة التصويت.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:#0f5132;
+    --green-dark:#0a3d26;
+    --gold:#c9a227;
+    --gold-light:#e0c15a;
+    --bg:#faf8f3;
+    --card-bg:#ffffff;
+    --text:#20281f;
+    --muted:#5b6660;
+    --border:#e4ddc9;
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Tajawal", "Segoe UI", Tahoma, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+    font-size:17px;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:var(--max-w);margin:0 auto;padding:0 20px;}
+
+  /* Skip link */
+  .skip-link{
+    position:absolute; right:-9999px; top:0; background:var(--gold); color:#20281f;
+    padding:10px 16px; z-index:1000; font-weight:700;
+  }
+  .skip-link:focus{right:10px; top:10px;}
+
+  /* Top nav */
+  header.site-nav{
+    position:sticky; top:0; z-index:100;
+    background:var(--green-deep);
+    color:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:var(--max-w); margin:0 auto; padding:12px 20px;
+    gap:12px; flex-wrap:wrap;
+  }
+  .brand{
+    font-weight:900; font-size:1.15rem; color:#fff; text-decoration:none;
+    display:flex; align-items:center; gap:8px;
+  }
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);display:inline-block;}
+  nav.links{display:flex; gap:4px; flex-wrap:wrap;}
+  nav.links a{
+    color:#fff; text-decoration:none; padding:8px 14px; border-radius:6px;
+    font-weight:500; font-size:.95rem; transition:background .15s;
+  }
+  nav.links a:hover, nav.links a:focus{background:rgba(255,255,255,.15);}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,var(--green-deep),var(--green-dark));
+    color:#fff;
+    padding:56px 0 44px;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:2.1rem;
+    margin:0 0 10px;
+    font-weight:900;
+    color:#fff;
+  }
+  .hero .tagline{
+    color:var(--gold-light);
+    font-size:1.2rem;
+    font-weight:700;
+    margin:0 0 18px;
+  }
+  .hero .context{
+    max-width:760px;
+    margin:0 auto 28px;
+    color:#e9f2ec;
+    font-size:1rem;
+  }
+  .vote-banner{
+    max-width:820px;
+    margin:0 auto;
+    background:rgba(255,255,255,.08);
+    border:2px solid var(--gold);
+    border-radius:12px;
+    padding:18px 20px;
+    text-align:right;
+  }
+  .vote-banner .label{
+    display:inline-block;
+    background:var(--gold);
+    color:#20281f;
+    font-weight:900;
+    padding:3px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    margin-bottom:10px;
+  }
+  .vote-banner p{margin:6px 0; color:#fff; font-size:.98rem;}
+
+  /* Sections */
+  section{padding:52px 0;}
+  section:nth-of-type(even){background:#fff;}
+  h2{
+    font-size:1.6rem;
+    color:var(--green-deep);
+    text-align:center;
+    margin:0 0 8px;
+    font-weight:900;
+  }
+  .section-sub{
+    text-align:center;
+    color:var(--muted);
+    max-width:680px;
+    margin:0 auto 34px;
+  }
+  .divider{
+    width:60px;height:4px;background:var(--gold);border-radius:2px;
+    margin:10px auto 30px;
+  }
+
+  /* Who we are / vision / mission */
+  .vrm-grid{
+    display:grid;
+    gap:22px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:800px){
+    .vrm-grid{grid-template-columns:1fr 1fr 1fr;}
+    .vrm-grid .wide{grid-column:1/-1;}
+  }
+  .vrm-card{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-right:5px solid var(--green-deep);
+    border-radius:10px;
+    padding:22px 24px;
+  }
+  .vrm-card h3{margin:0 0 10px;color:var(--green-deep);font-size:1.15rem;}
+  .vrm-card p{margin:0;color:var(--text);}
+
+  /* Program accordion */
+  .accordion-item{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:10px;
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .accordion-header{
+    width:100%;
+    text-align:right;
+    background:none;
+    border:none;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:1.08rem;
+    font-weight:700;
+    color:var(--green-deep);
+  }
+  .accordion-header .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;height:34px;
+    border-radius:50%;
+    background:var(--green-deep);
+    color:#fff;
+    font-size:.95rem;
+    flex:none;
+  }
+  .accordion-header .htext{flex:1;text-align:right;}
+  .accordion-header .slogan{
+    display:block;
+    font-weight:400;
+    font-size:.85rem;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .accordion-header .chevron{
+    flex:none;
+    width:22px;height:22px;
+    color:var(--gold);
+    transition:transform .2s;
+  }
+  .accordion-header[aria-expanded="true"] .chevron{transform:rotate(180deg);}
+  .accordion-panel{
+    padding:0 22px 22px;
+    display:none;
+  }
+  .accordion-panel.open{display:block;}
+  .accordion-panel p.intro{color:var(--text);margin-top:0;}
+  .accordion-panel h4{
+    color:var(--green-deep);
+    font-size:.98rem;
+    margin:16px 0 8px;
+  }
+  .accordion-panel ul{
+    margin:0;
+    padding-inline-start:20px;
+  }
+  .accordion-panel ul li{margin-bottom:6px;}
+  .goal-box{
+    margin-top:14px;
+    background:#f4efe0;
+    border-right:4px solid var(--gold);
+    border-radius:8px;
+    padding:12px 16px;
+    font-weight:500;
+    color:#3a3220;
+  }
+
+  /* Priorities */
+  .priority-grid{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:640px){
+    .priority-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(min-width:960px){
+    .priority-grid{grid-template-columns:1fr 1fr 1fr;}
+  }
+  .priority-card{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .priority-card .pnum{
+    flex:none;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#3a3220;
+    font-weight:900;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .priority-card p{margin:0;color:var(--text);}
+  .priority-card strong{display:block;color:var(--green-deep);margin-bottom:4px;}
+
+  /* Pull quote */
+  .quote-section{
+    background:linear-gradient(160deg,var(--green-dark),var(--green-deep));
+    color:#fff;
+  }
+  blockquote{
+    max-width:820px;
+    margin:0 auto;
+    font-size:1.15rem;
+    line-height:2;
+    font-weight:500;
+    position:relative;
+    padding:0 10px;
+  }
+  blockquote:before{
+    content:"\201C";
+    font-size:3rem;
+    color:var(--gold);
+    display:block;
+    line-height:0.5;
+    margin-bottom:20px;
+  }
+
+  /* Candidates */
+  .candidate-grid{
+    display:grid;
+    gap:22px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:700px){
+    .candidate-grid{grid-template-columns:1fr 1fr;}
+  }
+  .candidate-card{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:24px;
+  }
+  .candidate-head{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:14px;
+  }
+  .avatar{
+    flex:none;
+    width:64px;height:64px;
+    border-radius:50%;
+    background:var(--green-deep);
+    color:#fff;
+    font-weight:900;
+    font-size:1.4rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .candidate-head h3{margin:0 0 4px;color:var(--green-deep);font-size:1.15rem;}
+  .candidate-head .role{color:var(--muted);font-size:.92rem;margin:0;}
+  .candidate-card .summary{margin:0 0 14px;}
+  .candidate-card h4{
+    color:var(--green-deep);
+    font-size:.92rem;
+    margin:0 0 8px;
+  }
+  .candidate-card ul{margin:0 0 14px;padding-inline-start:20px;}
+  .candidate-card ul li{margin-bottom:6px;font-size:.96rem;}
+  .contact-line{
+    border-top:1px solid var(--border);
+    padding-top:12px;
+    font-size:.9rem;
+    color:var(--muted);
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .contact-line span{white-space:nowrap;}
+
+  .candidate-card.pending{
+    background:transparent;
+    border:2px dashed #b9b2a0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--muted);
+    min-height:220px;
+    padding:24px;
+  }
+  .candidate-card.pending .avatar{
+    background:transparent;
+    border:2px dashed #b9b2a0;
+    color:#b9b2a0;
+  }
+  .candidate-card.pending .soon-tag{
+    display:inline-block;
+    background:#eee7d3;
+    color:#7a6a30;
+    font-weight:700;
+    font-size:.8rem;
+    padding:4px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+  }
+
+  /* Voting mechanics */
+  .vote-info{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-right:5px solid var(--green-deep);
+    border-radius:10px;
+    padding:24px;
+    max-width:820px;
+    margin:0 auto 24px;
+  }
+  .cta-box{
+    max-width:820px;
+    margin:0 auto;
+    background:#f4efe0;
+    border:2px dashed var(--gold);
+    border-radius:10px;
+    padding:20px 24px;
+    text-align:center;
+    color:#3a3220;
+    font-weight:700;
+  }
+
+  /* Footer */
+  footer{
+    background:var(--green-dark);
+    color:#d8e6de;
+    text-align:center;
+    padding:30px 20px;
+    font-size:.92rem;
+  }
+  footer .footer-title{
+    color:#fff;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+
+  /* Utility */
+  .visually-hidden{
+    position:absolute; width:1px;height:1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap;
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span> مكيين لمستقبل أفضل</a>
+    <nav class="links" aria-label="التنقل الرئيسي">
+      <a href="#program">البرنامج</a>
+      <a href="#candidates">المرشحون</a>
+      <a href="#voting">التصويت</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container">
+      <h1>مكيين لمستقبل أفضل</h1>
+      <p class="tagline">كفاءة في الخدمة.. نمو في القيمة.. استدامة في الأثر</p>
+      <p class="context">
+        مرشحون لعضوية مجلس إدارة شركة مطوفي حجاج الدول العربية (أشرقت) — 8 مقاعد للانتخاب،
+        تصويت عادي بحد أقصى صوت واحد لكل مساهم لكل مرشح، قابل للتوزيع على حتى 8 مرشحين.
+      </p>
+      <div class="vote-banner" role="note" aria-label="موعد التصويت">
+        <span class="label">موعد الجمعية العامة والتصويت</span>
+        <p>
+          الجمعية العامة العادية والتصويت الإلكتروني: من الأحد 2026-09-14 الساعة 3:00 عصراً
+          حتى الأربعاء 2026-09-17 الساعة 8:00 مساءً.
+        </p>
+        <p>
+          اجتماع الجمعية العامة: الخميس 2026-09-17 الساعة 7:30 مساءً، بمقر الشركة بمكة المكرمة
+          (حضور مباشر + تقنية عن بُعد).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO / VISION / MISSION -->
+  <section id="about">
+    <div class="container">
+      <h2>من نحن</h2>
+      <div class="divider"></div>
+      <div class="vrm-grid">
+        <div class="vrm-card wide">
+          <h3>من نحن</h3>
+          <p>مجموعة من المرشحين من ذوي الخبرة الطويلة والتجارب المتنوعة، يجمعنا إيمان راسخ بأن شركة مطوفين
+          الدول العربية تمتلك تاريخاً عريقاً، وخبرات متراكمة، وإمكانات وفرصاً كبيرة تؤهلها لمرحلة جديدة من
+          النمو والتطور. نتقدم لهذه الانتخابات بخبرة نعتز بها، ورؤية نتطلع من خلالها إلى البناء على ما تحقق،
+          وتطوير ما يحتاج إلى تطوير، واستثمار الفرص المتاحة، وتحويل الإمكانات إلى نتائج ملموسة تخدم الشركة
+          ومساهميها وضيوف الرحمن.</p>
+        </div>
+        <div class="vrm-card">
+          <h3>الرؤية</h3>
+          <p>أن تكون شركة مطوفين الدول العربية نموذجاً رائداً في خدمة ضيوف الرحمن، وكياناً اقتصادياً مستداماً
+          يحقق النمو، ويرفع جودة الخدمات، ويعظم قيمة المساهمين، ويصنع أثراً مجتمعياً مستداماً.</p>
+        </div>
+        <div class="vrm-card">
+          <h3>الرسالة</h3>
+          <p>العمل على تطوير منظومة متكاملة لخدمة حجاج الدول العربية، تقوم على الكفاءة والابتكار والحوكمة،
+          وتستثمر في الإنسان والتقنية والشراكات، بما يعزز تنافسية الشركة واستدامتها، ويحقق قيمة مضافة للحاج
+          والمساهم والمجتمع.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program">
+    <div class="container">
+      <h2>البرنامج الانتخابي</h2>
+      <p class="section-sub">ستة محاور رئيسية تشكل خارطة عمل التكتل خلال دورة المجلس القادمة.</p>
+      <div class="divider"></div>
+
+      <div class="accordion" id="accordion"></div>
+    </div>
+  </section>
+
+  <!-- PRIORITIES -->
+  <section id="priorities">
+    <div class="container">
+      <h2>أولوياتنا في المرحلة القادمة</h2>
+      <div class="divider"></div>
+      <div class="priority-grid">
+        <div class="priority-card">
+          <span class="pnum">1</span>
+          <p><strong>تشخيص الأداء</strong>فهم الوضع الحالي وتحديد نقاط القوة وفرص التحسين.</p>
+        </div>
+        <div class="priority-card">
+          <span class="pnum">2</span>
+          <p><strong>تحديد الأولويات</strong>عدم تشتيت الجهود في عشرات المبادرات، بل التركيز على المبادرات ذات الأثر الأكبر.</p>
+        </div>
+        <div class="priority-card">
+          <span class="pnum">3</span>
+          <p><strong>رفع كفاءة التشغيل</strong>تحسين الخدمة وتقليل الهدر ورفع كفاءة الموارد.</p>
+        </div>
+        <div class="priority-card">
+          <span class="pnum">4</span>
+          <p><strong>فتح مسارات النمو</strong>البحث عن مصادر جديدة للإيرادات والاستثمار والشراكات.</p>
+        </div>
+        <div class="priority-card">
+          <span class="pnum">5</span>
+          <p><strong>تعزيز قيمة المساهم</strong>ربط القرارات الاستراتيجية بالنمو والربحية والقيمة طويلة الأجل.</p>
+        </div>
+        <div class="priority-card">
+          <span class="pnum">6</span>
+          <p><strong>رفع فاعلية الحوكمة</strong>توضيح الأدوار والمسؤوليات وتعزيز الرقابة والمساءلة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="quote-section">
+    <div class="container">
+      <h2 style="color:#fff;">كلمة للمساهمين</h2>
+      <div class="divider"></div>
+      <blockquote>
+        نحن لا نطلب ثقتكم من أجل مقعد في مجلس الإدارة، بل نطلبها من أجل مسؤولية نعرف حجمها، وفرصة نؤمن أن
+        علينا استثمارها. شركة مطوفين الدول العربية تملك تاريخًا وخبرة ومكانة وفرصًا كبيرة، وما نحتاجه في
+        المرحلة المقبلة هو أن نجمع هذه المقومات في رؤية واضحة، وقرار مسؤول، وتنفيذ منضبط، وقياس مستمر
+        للنتائج. نريد شركة يكون نجاحها واضحًا في عيون الحاج، وفي أرقامها المالية، وفي قيمة استثمارات
+        مساهميها، وفي أثرها على المجتمع. ثقتكم مسؤولية.. وعضوية المجلس تكليف.. والنتائج هي المعيار. نخدم
+        المستفيد بكفاءة.. ننمي الشركة بوعي.. نحمي قيمة المساهم.. ونصنع أثراً يستمر.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CANDIDATES -->
+  <section id="candidates">
+    <div class="container">
+      <h2>المرشحون</h2>
+      <p class="section-sub">تكتل مرشحين، سيتم استكمال الأعضاء والسير الذاتية تباعاً.</p>
+      <div class="divider"></div>
+
+      <div class="candidate-grid">
+
+        <article class="candidate-card">
+          <div class="candidate-head">
+            <div class="avatar" aria-hidden="true">و ب</div>
+            <div>
+              <h3>وائل بن عدلي أحمد بوشه</h3>
+              <p class="role">رئيس تنفيذي (CEO) وقائد وخبير في التنمية المجتمعية والاستدامة</p>
+            </div>
+          </div>
+          <p class="summary">
+            يتمتع بأكثر من 20 عامًا من الخبرة القيادية في إدارة البرامج المجتمعية ومنظومات الاستدامة
+            والمبادرات البيئية واسعة النطاق. خبير في صياغة وتنفيذ استراتيجيات الاستدامة وبناء الكيانات
+            عالية الأداء، بما في ذلك مبادرة السعودية الخضراء (SGI).
+          </p>
+          <h4>أبرز المحطات</h4>
+          <ul>
+            <li>مستشار التنمية المجتمعية لمساعد وزير الطاقة (2026–حتى الآن)</li>
+            <li>الرئيس التنفيذي لمؤسسة تنمية الغطاء النباتي الأهلية "مروج" (2021–2026) — قاد نمو الفريق إلى 60 موظفاً ومحفظة مشاريع بيئية تجاوزت 180 مليون ريال و12 مبادرة معتمدة ضمن السعودية الخضراء</li>
+            <li>مدير مشروع استضافة المملكة لمؤتمر الأمم المتحدة لمكافحة التصحر COP16 (2023–2026)</li>
+            <li>عضو مؤسس وعضو مجلس إدارة جمعية واعي منذ 2009</li>
+            <li>ماجستير إدارة أعمال (MBA)، بكالوريوس هندسة كيميائية من جامعة الملك فهد للبترول والمعادن</li>
+          </ul>
+          <div class="contact-line">
+            <span>جوال: +966 50 550 6306</span>
+            <span>بريد: wael.bushah@gmail.com</span>
+            <span>لينكدإن: linkedin.com/in/wael-bushah-235b2923b</span>
+          </div>
+        </article>
+
+        <article class="candidate-card">
+          <div class="candidate-head">
+            <div class="avatar" aria-hidden="true">ح ك</div>
+            <div>
+              <h3>د. حسين خليل عبدالرحمن كوشك</h3>
+              <p class="role">قيادي وأكاديمي — خبرة قرابة ثلاثة عقود في منظومة الحج، الحوكمة، وإدارة المجالس</p>
+            </div>
+          </div>
+          <p class="summary">
+            قيادي وأكاديمي بخبرة مهنية تمتد قرابة ثلاثة عقود في منظومة الحج وخدمة ضيوف الرحمن، تشمل
+            التشغيل، والنقل، وإدارة الأزمات، والتحول الرقمي، والحوكمة، وإدارة المجالس واللجان.
+          </p>
+          <h4>أبرز المحطات</h4>
+          <ul>
+            <li>قاد قطاع النقل لحجاج أربع مناطق جغرافية لمدة 13 عاماً في شركة مطوفي حجاج تركيا وأوروبا وأمريكا وأستراليا (2010–2023)</li>
+            <li>أدار منظومة بطاقة نسك ومعلومات الحج (شركتا إثراء الخير والراجحي، 2024–2026)</li>
+            <li>نائب مدير إدارة الطوارئ والأزمات بأمانة العاصمة المقدسة، وعضو لجان مكافحة حمى الضنك الثلاث (2009–2011)</li>
+            <li>أستاذ مشارك ووكيل كلية علوم الرياضة بجامعة جدة، وعضو مؤسس بمجلس إدارة جمعية الإدارة الرياضية</li>
+            <li>دكتوراه في القيادة والإدارة الرياضية من جامعة كنكورديا شيكاغو (2019)</li>
+          </ul>
+          <div class="contact-line">
+            <span>مكة المكرمة</span>
+            <span>جوال: 0555555867</span>
+            <span>بريد: h@koshak.com</span>
+            <span>تويتر: @hkoshak</span>
+          </div>
+        </article>
+
+        <article class="candidate-card pending" aria-label="مرشح إضافي — قريباً">
+          <div class="avatar" aria-hidden="true">؟</div>
+          <span class="soon-tag">قريباً</span>
+          <p>مرشح إضافي في التكتل — السيرة الذاتية قيد الإضافة</p>
+        </article>
+
+        <article class="candidate-card pending" aria-label="مرشح إضافي — قريباً">
+          <div class="avatar" aria-hidden="true">؟</div>
+          <span class="soon-tag">قريباً</span>
+          <p>مرشح إضافي في التكتل — السيرة الذاتية قيد الإضافة</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VOTING -->
+  <section id="voting">
+    <div class="container">
+      <h2>كيف تصوّت</h2>
+      <div class="divider"></div>
+      <div class="vote-info">
+        <p>
+          <strong>طريقة التصويت هذه الدورة:</strong> تصويت عادي (صوت واحد لكل سهم) — يحق لكل مساهم توزيع
+          صوته على حتى 8 مرشحين (مقعد واحد لكل مرشح، وليس تركيزاً على مرشح واحد).
+        </p>
+        <p>
+          <strong>التصويت الإلكتروني متاح:</strong> من الأحد 2026-09-14 الساعة 3:00 عصراً حتى الأربعاء
+          2026-09-17 الساعة 8:00 مساءً.
+        </p>
+      </div>
+      <div class="cta-box">
+        تابع قنوات الشركة الرسمية للحصول على رابط التصويت الإلكتروني.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-title">مكيين لمستقبل أفضل</div>
+  <div>تكتل مرشحين لعضوية مجلس إدارة شركة مطوفي حجاج الدول العربية (أشرقت)</div>
+  <div id="year" style="margin-top:8px;"></div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var programData = [
+    {
+      title: "كفاءة الخدمات",
+      slogan: "",
+      intro: "جودة الخدمة هي أساس عمل الشركة وسمعتها ونجاحها. وكلما ارتفعت كفاءة التشغيل وتحسنت تجربة المستفيد، ارتفعت قدرة الشركة على المنافسة وتعززت ثقة شركائها ومساهميها. لذلك نريد الانتقال من مفهوم تقديم الخدمة إلى مفهوم إدارة تجربة المستفيد؛ من خلال القياس المستمر، واستخدام التقنية، وتأهيل الكوادر، والاستفادة من البيانات والملاحظات في صناعة التحسين.",
+      items: [
+        "تطوير مؤشرات أداء واضحة لقياس جودة الخدمات ورضا المستفيدين.",
+        "مراجعة رحلة المستفيد واكتشاف نقاط الضعف وتحسينها.",
+        "توظيف التقنية والذكاء الاصطناعي في رفع كفاءة التشغيل.",
+        "تطوير قدرات العاملين وتأهيلهم وفق احتياجات المرحلة.",
+        "بناء آلية سريعة وفاعلة للتعامل مع الشكاوى والملاحظات.",
+        "الاستفادة من بيانات وتجارب المواسم السابقة في تحسين الأداء.",
+        "تعزيز التكامل مع الجهات ذات العلاقة بمنظومة الحج.",
+        "قياس جودة الخدمة بصورة دورية وربطها بمؤشرات أداء واضحة."
+      ],
+      goal: "خدمة أكثر كفاءة، وتجربة أفضل للحاج، وتشغيل أكثر انضباطًا، وجودة يمكن قياسها وتحسينها باستمرار."
+    },
+    {
+      title: "النمو",
+      slogan: "من إدارة الفرص إلى صناعة الفرص",
+      intro: "النمو الحقيقي لا يعني زيادة حجم الأعمال فقط، بل يعني القدرة على خلق مصادر جديدة للإيرادات، وتحسين الربحية، واستثمار الأصول، وتطوير المنتجات والخدمات، وبناء شراكات تفتح للشركة آفاقًا جديدة. نظرتنا إلى الشركة ليس باعتبارها مقدماً للخدمة فقط، بل ككيان يملك خبرة وأصولاً وعلاقات وبيانات يمكن تحويلها إلى فرص اقتصادية مستدامة.",
+      items: [
+        "إعداد استراتيجية نمو واضحة متعددة السنوات.",
+        "تنويع مصادر الإيرادات وتقليل الاعتماد على مصدر واحد.",
+        "دراسة تطوير خدمات ومنتجات جديدة.",
+        "استثمار الفرص المتاحة في منظومة خدمة ضيوف الرحمن.",
+        "بناء شراكات استراتيجية مع القطاعين العام والخاص.",
+        "رفع كفاءة استثمار أصول الشركة.",
+        "دراسة الفرص الاستثمارية والاستحواذات والشراكات ذات الجدوى.",
+        "الاستفادة من البيانات والخبرة المتراكمة داخل الشركة.",
+        "وضع مؤشرات واضحة للنمو والإيرادات والربحية."
+      ],
+      goal: "نمو مربح ومستدام يرفع قيمة الشركة، ويوسع مصادر دخلها، ويعزز قدرتها التنافسية."
+    },
+    {
+      title: "الاستدامة",
+      slogan: "لا نبحث عن نجاح موسم.. بل عن قوة تستمر",
+      intro: "الشركة الناجحة ليست التي تحقق نتائج جيدة في موسم واحد، وإنما التي تستطيع المحافظة على أدائها، ومواجهة المتغيرات، والاستثمار في المستقبل. ولهذا نرى أن الاستدامة يجب أن تكون جزءاً من طريقة إدارة الشركة، وليست مبادرة منفصلة.",
+      items: [
+        "تعزيز الاستدامة المالية وتنويع مصادر الدخل.",
+        "رفع كفاءة الإنفاق والتشغيل.",
+        "الاستثمار في التحول الرقمي والبنية التقنية.",
+        "المحافظة على الكفاءات والخبرات وتطويرها.",
+        "تعزيز إدارة المخاطر واستمرارية الأعمال.",
+        "بناء خطط للتعامل مع الأزمات والمتغيرات.",
+        "تحسين كفاءة استخدام الموارد.",
+        "ربط الاستدامة بمؤشرات أداء قابلة للقياس.",
+        "تعزيز قدرة الشركة على التكيف مع المتغيرات المستقبلية."
+      ],
+      goal: "شركة أكثر مرونة، وأقوى مالياً وتشغيلياً، وأكثر قدرة على مواجهة المستقبل وصناعة القيمة."
+    },
+    {
+      title: "المساهمون",
+      slogan: "المساهم شريك.. والثقة مسؤولية",
+      intro: "المساهم لا يريد مجرد وعود؛ بل يريد أن يعرف أين تتجه الشركة، وكيف تدار أمواله، وما الذي تحقق، وما هي الفرص والمخاطر أمامها. ومن هنا نؤمن بأن العلاقة مع المساهمين يجب أن تقوم على الشفافية، والوضوح، والتواصل، وتحقيق قيمة مستدامة.",
+      items: [
+        "تعزيز التواصل المنتظم والشفاف مع المساهمين.",
+        "تقديم معلومات واضحة عن أداء الشركة ومستهدفاتها.",
+        "رفع كفاءة استخدام رأس المال.",
+        "البحث عن فرص حقيقية لتحسين العائد على الاستثمار.",
+        "دعم سياسة توزيعات متوازنة ومستدامة وفق أداء الشركة.",
+        "تطوير قنوات لاستقبال مقترحات وملاحظات المساهمين.",
+        "تعزيز حماية حقوق جميع المساهمين وتحقيق العدالة بينهم.",
+        "ربط أداء مجلس الإدارة والإدارة التنفيذية بمؤشرات قابلة للقياس.",
+        "رفع مستوى الشفافية في عرض النتائج والتحديات والفرص."
+      ],
+      goal: "تعظيم قيمة الشركة للمساهمين، وبناء علاقة تقوم على الثقة والشفافية والمساءلة."
+    },
+    {
+      title: "المسؤولية المجتمعية",
+      slogan: "خدمة المستفيد.. وأثر يتجاوز الموسم",
+      intro: "الشركة جزء من منظومة وطنية ومجتمعية عظيمة لخدمة ضيوف الرحمن، ومسؤوليتها لا تنتهي بانتهاء موسم الحج. نسعى إلى أن تتحول المسؤولية المجتمعية من مجموعة مبادرات متفرقة إلى أثر مؤسسي مرتبط باستراتيجية الشركة واحتياجات المجتمع.",
+      items: [
+        "إطلاق مبادرات نوعية تخدم ضيوف الرحمن.",
+        "تمكين وتأهيل الشباب للعمل في منظومة الحج.",
+        "دعم رواد الأعمال والمنشآت الصغيرة والمتوسطة في القطاعات المرتبطة بالحج.",
+        "تطوير برامج تطوعية مؤسسية ذات أثر قابل للقياس.",
+        "دعم المبادرات التعليمية والمعرفية المرتبطة بخدمة الحجاج.",
+        "تعزيز حضور الشركة في المبادرات المجتمعية بمكة المكرمة.",
+        "بناء شراكات مع الجهات غير الربحية والقطاع الخاص.",
+        "قياس الأثر الاجتماعي للمبادرات بدل الاكتفاء بعدد الأنشطة."
+      ],
+      goal: "أن تكون الشركة شريكاً فاعلاً في المجتمع، وأن يتحول حضورها المجتمعي إلى أثر حقيقي ومستدام."
+    },
+    {
+      title: "مجلس الإدارة",
+      slogan: "مجلس يوجه.. إدارة تنفذ.. ومساهم يطمئن",
+      intro: "نؤمن أن قوة مجلس الإدارة لا تقاس بعدد اجتماعاته، وإنما بجودة قراراته وقدرته على توجيه الشركة ومراقبة أدائها وتحقيق التوازن بين الطموح والمخاطر. المجلس ليس إدارة تنفيذية، والإدارة التنفيذية ليست بديلاً عن المجلس. ولكل طرف دوره ومسؤوليته.",
+      items: [
+        "وضع استراتيجية واضحة للشركة ومتابعة تنفيذها.",
+        "اعتماد مؤشرات أداء رئيسية ومتابعتها بصورة دورية.",
+        "الفصل الواضح بين الدور الاستراتيجي للمجلس والدور التنفيذي للإدارة.",
+        "تفعيل اللجان المتخصصة ورفع كفاءتها.",
+        "تعزيز الحوكمة وإدارة المخاطر والالتزام.",
+        "تقييم أداء مجلس الإدارة واللجان والإدارة التنفيذية بصورة دورية.",
+        "تطوير خطط التعاقب القيادي واستدامة الكفاءات.",
+        "تعزيز الشفافية والإفصاح.",
+        "بناء ثقافة قائمة على القرار المبني على البيانات والمؤشرات.",
+        "التركيز على القضايا الاستراتيجية بدل الانشغال بالتفاصيل التشغيلية."
+      ],
+      goal: "مجلس إدارة فاعل يصنع الاتجاه، ويراقب الأداء، ويدير المخاطر، ويدعم الإدارة التنفيذية، ويحاسب على النتائج."
+    }
+  ];
+
+  function esc(s){
+    var d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  var wrap = document.getElementById("accordion");
+  var html = "";
+  programData.forEach(function(item, i){
+    var panelId = "panel-" + i;
+    var headId = "head-" + i;
+    html += '<div class="accordion-item">';
+    html += '<h3 style="margin:0;">';
+    html += '<button class="accordion-header" id="' + headId + '" aria-expanded="' + (i===0 ? "true":"false") + '" aria-controls="' + panelId + '">';
+    html += '<span class="num">' + (i+1) + '</span>';
+    html += '<span class="htext">' + esc(item.title) + (item.slogan ? '<span class="slogan">' + esc(item.slogan) + '</span>' : '') + '</span>';
+    html += '<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    html += '</button></h3>';
+    html += '<div class="accordion-panel' + (i===0 ? ' open':'') + '" id="' + panelId + '" role="region" aria-labelledby="' + headId + '">';
+    html += '<p class="intro">' + esc(item.intro) + '</p>';
+    html += '<h4>نعمل على</h4><ul>';
+    item.items.forEach(function(li){ html += '<li>' + esc(li) + '</li>'; });
+    html += '</ul>';
+    html += '<div class="goal-box"><strong>الهدف:</strong> ' + esc(item.goal) + '</div>';
+    html += '</div></div>';
+  });
+  wrap.innerHTML = html;
+
+  wrap.addEventListener("click", function(e){
+    var btn = e.target.closest(".accordion-header");
+    if(!btn) return;
+    var expanded = btn.getAttribute("aria-expanded") === "true";
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+    if(panel){
+      panel.classList.toggle("open", !expanded);
+    }
+  });
+
+  document.getElementById("year").textContent = "© " + new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
