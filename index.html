@@ -93,6 +93,52 @@
     color:var(--ink);
     font-size:1rem;
   }
+  .value-icons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:28px;
+    max-width:760px;
+    margin:0 auto 26px;
+  }
+  .value-icon{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    width:150px;
+  }
+  .value-icon svg{color:var(--ink);}
+  .value-icon .value-photo{
+    width:56px;height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--ink);
+  }
+  .value-icon span{font-size:.85rem;font-weight:700;line-height:1.4;}
+
+  .building-banner{
+    margin:0;
+    position:relative;
+  }
+  .building-banner img{
+    width:100%;
+    max-height:420px;
+    object-fit:cover;
+    display:block;
+  }
+  .building-banner figcaption{
+    position:absolute;
+    inset-inline:0;
+    bottom:0;
+    background:linear-gradient(to top, rgba(0,0,0,.65), transparent);
+    color:#fff;
+    padding:22px 20px 14px;
+    text-align:center;
+    font-weight:700;
+    font-size:.98rem;
+  }
+
   .hero .trust-statement{
     display:inline-block;
     margin:0 auto 24px;
@@ -475,6 +521,30 @@
       <h1>مكيّون لمستقبل أفضل</h1>
       <p class="board-badge">تكتل مرشحين لعضوية مجلس إدارة شركة مطوفي حجاج الدول العربية (أشرقت)</p>
       <p class="tagline">كفاءة في الخدمة.. نمو في القيمة.. استدامة في الأثر</p>
+
+      <div class="value-icons">
+        <div class="value-icon">
+          <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 18 L32 9 L50 18" />
+            <rect x="14" y="18" width="36" height="34" />
+            <rect x="14" y="26" width="36" height="8" fill="currentColor" stroke="none" opacity=".8"/>
+            <rect x="28" y="40" width="8" height="12" />
+          </svg>
+          <span>خدمة ضيوف الرحمن في مكة المكرمة</span>
+        </div>
+        <div class="value-icon">
+          <img class="value-photo" src="photos/building.jpg" alt="برج مطوفي العرب 1 — مقر شركة مطوفي حجاج الدول العربية (أشرقت)">
+          <span>شركة راسخة بإرث عريق في قطاع الحج</span>
+        </div>
+        <div class="value-icon">
+          <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 46 L24 32 L34 40 L54 16" />
+            <path d="M42 16 L54 16 L54 28" />
+          </svg>
+          <span>نمو واستثمار مستدام للمستقبل</span>
+        </div>
+      </div>
+
       <p class="heritage-statement">
         نحن أبناء مكة المكرمة الذين توارثوا خدمة ضيوف الرحمن جيلاً بعد جيل، نترشح اليوم لعضوية مجلس
         إدارة شركة مطوفي حجاج الدول العربية (أشرقت) بخبرة نعتز بها وانتماء أصيل نستمد منه رؤيتنا لمستقبل الشركة.
@@ -501,6 +571,12 @@
       </div>
     </div>
   </section>
+
+  <!-- BUILDING BANNER -->
+  <figure class="building-banner">
+    <img src="photos/building.jpg" alt="برج مطوفي العرب 1 — مقر شركة مطوفي حجاج الدول العربية (أشرقت) بمكة المكرمة">
+    <figcaption>مقر شركة مطوفي حجاج الدول العربية (أشرقت) — برج مطوفي العرب، مكة المكرمة</figcaption>
+  </figure>
 
   <!-- WHO / VISION / MISSION -->
   <section id="about">
