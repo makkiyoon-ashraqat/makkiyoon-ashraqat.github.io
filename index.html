@@ -391,19 +391,31 @@
   }
   .candidate-num{
     position:absolute;
-    top:-6px;
-    inset-inline-end:-6px;
+    top:-8px;
+    inset-inline-end:-8px;
     background:var(--gold);
     color:#3a2a05;
     font-weight:900;
     font-size:.78rem;
-    width:26px;height:26px;
-    border-radius:50%;
+    min-width:30px;height:30px;
+    padding:0 8px;
+    border-radius:999px;
     display:flex;align-items:center;justify-content:center;
     border:2px solid #fff;
+    box-shadow:0 1px 4px rgba(0,0,0,.2);
   }
   .candidate-head h3{margin:0 0 4px;color:var(--ink);font-size:1.15rem;}
   .candidate-head .role{color:var(--muted);font-size:.92rem;margin:0;}
+  .ballot-num{
+    display:inline-block;
+    margin:6px 0 0;
+    background:var(--gold);
+    color:#3a2a05;
+    font-weight:900;
+    font-size:.85rem;
+    padding:3px 12px;
+    border-radius:999px;
+  }
   .candidate-card .summary{margin:0 0 14px;}
   .candidate-card h4{
     color:var(--ink);
@@ -659,10 +671,11 @@
         <article class="candidate-card">
           <div class="candidate-head">
             <div class="avatar"><img src="photos/jameel.jpg" alt="جميل بن محمد جميل بياري"></div>
-            <span class="candidate-num" aria-hidden="true">01</span>
+            <span class="candidate-num" aria-label="رقم المرشح 48">48</span>
             <div>
               <h3>أ. جميل بن محمد جميل بياري</h3>
               <p class="role">خبرة مهنية في قطاع الحج والخدمات والإدارة والاستثمار — قرابة 30 عاماً</p>
+              <p class="ballot-num">رقم المرشح: 48</p>
             </div>
           </div>
           <p class="summary">
@@ -690,10 +703,11 @@
         <article class="candidate-card">
           <div class="candidate-head">
             <div class="avatar"><img src="photos/hussein.jpg" alt="د. حسين خليل عبدالرحمن كوشك"></div>
-            <span class="candidate-num" aria-hidden="true">02</span>
+            <span class="candidate-num" aria-label="رقم المرشح 55">55</span>
             <div>
               <h3>د. حسين خليل عبدالرحمن كوشك</h3>
               <p class="role">قيادي وأكاديمي — خبرة قرابة ثلاثة عقود في منظومة الحج، الحوكمة، وإدارة المجالس</p>
+              <p class="ballot-num">رقم المرشح: 55</p>
             </div>
           </div>
           <p class="summary">
@@ -719,10 +733,11 @@
         <article class="candidate-card">
           <div class="candidate-head">
             <div class="avatar"><img src="photos/haitham.jpg" alt="هيثم بن عفيفي بياري"></div>
-            <span class="candidate-num" aria-hidden="true">03</span>
+            <span class="candidate-num" aria-label="رقم المرشح 173">173</span>
             <div>
               <h3>أ. هيثم بن عفيفي بياري</h3>
               <p class="role">قيادي تنفيذي — خبرة تتجاوز 20 عاماً في قطاعي الحج والتطوير العقاري</p>
+              <p class="ballot-num">رقم المرشح: 173</p>
             </div>
           </div>
           <p class="summary">
@@ -749,10 +764,11 @@
         <article class="candidate-card">
           <div class="candidate-head">
             <div class="avatar"><img src="photos/wael.jpg" alt="م. وائل عدلي بوشه"></div>
-            <span class="candidate-num" aria-hidden="true">04</span>
+            <span class="candidate-num" aria-label="رقم المرشح 175">175</span>
             <div>
               <h3>م. وائل عدلي بوشه</h3>
               <p class="role">رئيس تنفيذي (CEO) وقائد وخبير في التنمية المجتمعية والاستدامة</p>
+              <p class="ballot-num">رقم المرشح: 175</p>
             </div>
           </div>
           <p class="summary">
