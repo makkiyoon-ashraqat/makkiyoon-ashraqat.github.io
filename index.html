@@ -63,10 +63,10 @@
   .brand .dot{width:10px;height:10px;border-radius:50%;background:#fff;display:inline-block;}
   nav.links{display:flex; gap:4px; flex-wrap:wrap;}
   nav.links a{
-    color:#fff; text-decoration:none; padding:8px 14px; border-radius:6px;
+    color:var(--ink); text-decoration:none; padding:8px 14px; border-radius:6px;
     font-weight:500; font-size:.95rem; transition:background .15s;
   }
-  nav.links a:hover, nav.links a:focus{background:rgba(255,255,255,.18);}
+  nav.links a:hover, nav.links a:focus{background:rgba(0,0,0,.08);}
 
   /* Hero */
   .hero{
@@ -93,6 +93,17 @@
     margin:0 auto 28px;
     color:#fff;
     font-size:1rem;
+  }
+  .hero .board-badge{
+    color:var(--ink);
+    text-shadow:none;
+    font-weight:700;
+  }
+  .hero .heritage-statement{
+    color:var(--ink);
+    text-shadow:none;
+    max-width:760px;
+    margin:0 auto 24px;
   }
   .building-banner{
     margin:0;
