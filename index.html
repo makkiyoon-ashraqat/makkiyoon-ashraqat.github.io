@@ -996,12 +996,13 @@
 
   var visitBox = document.getElementById("visit-counter");
   var visitCount = document.getElementById("visit-count");
+  var VISIT_OFFSET = 70; // estimated visits before the counter was added
   if (visitBox && visitCount) {
     fetch("https://abacus.jasoncameron.dev/hit/makkiyoon-ashraqat-github-io/visits")
       .then(function(r){ return r.json(); })
       .then(function(data){
         if (data && typeof data.value === "number") {
-          visitCount.textContent = data.value.toLocaleString("en-US");
+          visitCount.textContent = (data.value + VISIT_OFFSET).toLocaleString("en-US");
           visitBox.style.display = "";
         }
       })
