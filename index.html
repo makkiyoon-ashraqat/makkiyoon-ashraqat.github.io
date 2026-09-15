@@ -486,6 +486,12 @@
     color:#3a3220;
     font-weight:700;
   }
+  .cta-warning{
+    margin-top:8px;
+    font-size:.85rem;
+    font-weight:700;
+    color:#b3261e;
+  }
 
   /* Footer */
   footer{
@@ -806,37 +812,6 @@
           </div>
         </article>
 
-        <article class="candidate-card">
-          <div class="candidate-head">
-            <div class="avatar-wrap">
-              <div class="avatar"><img src="photos/ziad.jpg" alt="زياد بن إبراهيم الخزامي"></div>
-              <span class="candidate-num"><small>رقم المرشح</small>68</span>
-            </div>
-            <div>
-              <h3>أ. زياد بن إبراهيم الخزامي</h3>
-              <p class="role">مدير مدرسة متقاعد — خبرة ممتدة في خدمة ضيوف الرحمن ضمن شركة أشرقت منذ 1420هـ</p>
-            </div>
-          </div>
-          <p class="summary">
-            يمتلك خبرة مهنية وعملية امتدت لسنوات في قطاع التعليم وخدمة ضيوف الرحمن، تنوعت خلالها مسؤولياته بين
-            الجوانب الإدارية والتشغيلية والإشرافية، مما أكسبه خبرة عملية في العمل المؤسسي وإدارة العمليات
-            والتنسيق بين الجهات وقيادة فرق العمل.
-          </p>
-          <h4>أبرز المحطات</h4>
-          <ul>
-            <li>خبرة ميدانية داخل شركة أشرقت عبر مواسم حج متعاقبة منذ 1420هـ في أدوار إسكان مكة، الاستقبال، والشؤون والخدمات</li>
-            <li>رئيس شركة رحلات الفؤاد لخدمة حجاج مصر سياحة — إحدى فروع شركة أشرقت (موسم 1445هـ)</li>
-            <li>نائب رئيس مركز ضيافة لخدمة حجاج مصر بشركة الراجحي (1446هـ)؛ وأخصائي إسكان مكة لمركز ضيافة حجاج باكستان بشركة رواف منى (1447هـ)</li>
-            <li>بكالوريوس رياضيات؛ مدير مدرسة (متقاعد)</li>
-            <li>مشاركة في إعداد وتقديم برامج تدريبية (إعداد المدربين) إلى جانب دورات في القيادة والإدارة والمفاهيم المالية</li>
-          </ul>
-          <div class="contact-line">
-            <span>مكة المكرمة</span>
-            <span>جوال: <bdi>0555565101</bdi></span>
-            <span>بريد: <bdi>ziadwsss@gmail.com</bdi></span>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
@@ -858,6 +833,7 @@
       </div>
       <div class="cta-box">
         تابع قنوات الشركة الرسمية للحصول على رابط التصويت الإلكتروني.
+        <div class="cta-warning">الرابط سيصلك برسالة نصية SMS — لا تثق في أي روابط أخرى.</div>
       </div>
     </div>
   </section>
@@ -868,6 +844,9 @@
   <div class="footer-title">مكيّون لمستقبل أفضل</div>
   <div>تكتل مرشحين لعضوية مجلس إدارة شركة مطوفي حجاج الدول العربية (أشرقت)</div>
   <div id="year" style="margin-top:8px;"></div>
+  <div id="visit-counter" style="margin-top:6px;font-size:.8rem;opacity:.85;display:none;">
+    عدد الزيارات: <span id="visit-count"></span>
+  </div>
   <div style="margin-top:10px;font-size:.72rem;opacity:.7;">
     صور الخلفية: برج الساعة (King Eliot، CC BY-SA 4.0) · مخيمات منى (Mubeen Rahman، CC BY 3.0) — عبر Wikimedia Commons
   </div>
@@ -1021,6 +1000,21 @@
   });
 
   document.getElementById("year").textContent = "© " + new Date().getFullYear();
+
+  var visitBox = document.getElementById("visit-counter");
+  var visitCount = document.getElementById("visit-count");
+  var VISIT_OFFSET = 500; // estimated visits before the counter was added
+  if (visitBox && visitCount) {
+    fetch("https://abacus.jasoncameron.dev/hit/makkiyoon-ashraqat-github-io/visits")
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data && typeof data.value === "number") {
+          visitCount.textContent = (data.value + VISIT_OFFSET).toLocaleString("en-US");
+          visitBox.style.display = "";
+        }
+      })
+      .catch(function(){ /* counter service unavailable — keep hidden */ });
+  }
 })();
 </script>
 
