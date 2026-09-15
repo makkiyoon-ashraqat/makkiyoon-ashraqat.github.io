@@ -138,6 +138,14 @@
     padding:10px 32px;
     border-radius:999px;
   }
+  .hero .ballot-strip{
+    display:block;
+    margin:0 auto 24px;
+    font-size:1.15rem;
+    font-weight:900;
+    color:#fff;
+    letter-spacing:.5px;
+  }
   .hero .program-intro{
     max-width:760px;
     margin:0 auto 28px;
@@ -543,6 +551,7 @@
         إدارة شركة مطوفي حجاج الدول العربية (أشرقت) بخبرة نعتز بها وانتماء أصيل نستمد منه رؤيتنا لمستقبل الشركة.
       </p>
       <p class="trust-statement">صوتكم أمانة</p>
+      <p class="ballot-strip">صوّتوا لأرقام: <bdi>48 · 55 · 173 · 175</bdi></p>
       <p class="program-intro">
         ينطلق برنامجنا الانتخابي من رؤية واضحة لمستقبل شركة مطوفي حجاج الدول العربية (أشرقت)، تقوم على تطوير ما تحقق،
         واستثمار الفرص، ورفع كفاءة الأداء، وتعظيم قيمة الشركة ومساهميها، مع مواصلة الارتقاء بخدمة ضيوف
@@ -568,12 +577,29 @@
   <!-- CAMPAIGN VIDEO -->
   <section id="video-section" style="padding:36px 0;">
     <div class="container">
-      <video controls autoplay loop playsinline preload="auto" poster="photos/building.jpg" style="width:100%;max-width:720px;display:block;margin:0 auto;border-radius:12px;">
-        <source src="media/campaign-video.mp4" type="video/mp4">
-        متصفحك لا يدعم تشغيل الفيديو مباشرة، يمكنك <a href="media/campaign-video.mp4">تحميل الفيديو من هنا</a>.
-      </video>
+      <div style="position:relative;max-width:720px;margin:0 auto;">
+        <video id="campaign-video" controls autoplay muted loop playsinline preload="auto" poster="photos/building.jpg" style="width:100%;display:block;border-radius:12px;">
+          <source src="media/campaign-video.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو مباشرة، يمكنك <a href="media/campaign-video.mp4">تحميل الفيديو من هنا</a>.
+        </video>
+        <button id="unmute-btn" type="button" aria-label="تشغيل الصوت" style="position:absolute;bottom:14px;inset-inline-end:14px;background:var(--gold);color:#fff;border:2px solid #fff;border-radius:999px;padding:8px 16px;font-weight:900;font-size:.95rem;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(0,0,0,.3);">
+          🔊 اضغط للصوت
+        </button>
+      </div>
     </div>
   </section>
+  <script>
+    (function(){
+      var v = document.getElementById("campaign-video");
+      var btn = document.getElementById("unmute-btn");
+      if(!v || !btn) return;
+      btn.addEventListener("click", function(){
+        v.muted = false;
+        v.play();
+        btn.style.display = "none";
+      });
+    })();
+  </script>
 
   <!-- BUILDING BANNER -->
   <figure class="building-banner">
